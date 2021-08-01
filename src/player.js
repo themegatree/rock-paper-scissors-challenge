@@ -4,11 +4,7 @@ class Player {
         this.choice = ""
     };
 
-    userRPS(num) {
-        if (num === 0) {this.choice = "Rock"}
-        else if (num === 1) {this.choice = "Paper"}
-        else {this.choice = "Scissors"};
-    };
-};
+    userRPS(num) {this.choice = num};
+}
 
 module.exports = Player;
