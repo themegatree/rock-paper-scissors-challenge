@@ -80,7 +80,7 @@ I then wrote the server side logic to handle user inputs. There are three pages 
 `/result`: Displays the result of the game.
 
 ---
-## Domain Model:
+## Domain Model
 Object | Message | Input | Output | Notes
 ---|---|---|--- | ----
 Player | constructor( ) | name[@string] | --- | ---
