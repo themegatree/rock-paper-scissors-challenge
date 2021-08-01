@@ -42,10 +42,9 @@ then run the tests with:
 ```bash
 $ npx cypress open
 ```
-or if you dislike the visual user interface:
-```
-$ npx cypress start
-```
+
+and use the interface to view the tests.
+
 ---
 ## Acceptance Criteria
 
@@ -58,6 +57,9 @@ As a DFAT member
 So that I can enjoy myself away from the daily grind
 I would like to be able to play rock/paper/scissors
 ```
+
+Through cypress running `feature-test.spec.js` will confirm this these user stories are 
+
 ---
 ## Appoach
 

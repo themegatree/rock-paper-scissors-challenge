@@ -1,6 +1,6 @@
 # User Stories
 
-This page lists user stories for the project. I have a refernce code for each of them (e.g. 'FT1') corresponding for refernce in the test code.
+This page lists user stories for the project. I have a reference code for each of them (e.g. 'FT1') corresponding to the reference codes in the tests.
 
 ## Acceptance Criteria (Feature Tests)
 FT1:
@@ -66,6 +66,28 @@ So the game works
 I would like to ensure the game logic is all working as intended
 ```
 
+BF8:
+```
+As a user
+So I can use the application
+I want to be able to input my name
+```
+
+BF9:
+```
+As a user
+So I can play RPS
+I want to input my RPS choice on the app
+```
+
+BF10:
+```
+As a user
+So I can see the result of the game
+I want a result message to show
+```
+
+
 
 ## Extended Criteria (Feature Tests)
 EC1: 
@@ -75,4 +97,14 @@ EC1:
 ## My Tests for the functionality not listed in the instructions
 PT1:
 ```
+As a user
+So I know what the application does
+I want a title and instructions on the home page
+```
+
+PT2:
+```
+As a DFAT member
+So I can play again
+I want a reset button
 ```
