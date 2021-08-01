@@ -38,6 +38,35 @@ So Players can play RPS
 I would like to ensure players are added to the game
 ```
 
+BF4: 
+```
+As a developer
+So the gamew functions
+I would like to be able to register users RPS input
+```
+
+BF5:
+```
+As a Computer
+So DFAT members can play with me
+I would like to be able to pick all the RPS choices
+```
+
+BF6: 
+```
+As a developer
+So the game can be resolved
+I would like to be able to determine the winner
+```
+
+BF7:
+```
+As a developer
+So the game works 
+I would like to ensure the game logic is all working as intended
+```
+
+
 ## Extended Criteria (Feature Tests)
 EC1: 
 ```
