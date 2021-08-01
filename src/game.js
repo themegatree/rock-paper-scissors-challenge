@@ -1,7 +1,9 @@
 const Player = require("./player.js")
 
 class Game {
-    constructor() {}
-}
+    constructor(player) {
+        this.player = player;
+    };
+};
 
 module.exports = Game;

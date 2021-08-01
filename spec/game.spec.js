@@ -7,7 +7,7 @@ class mockPlayer{
     };
 };
 
-describe("Game Class Component Tests: ", function() {
+xdescribe("Game Class Component Tests: ", function() {
 
     beforeEach(function() {
         player = new mockPlayer();

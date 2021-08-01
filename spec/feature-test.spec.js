@@ -1,7 +1,7 @@
 const Player = require("../src/player.js");
 const Game = require("../src/game.js");
 
-describe("Jasmine Feature Tests: ", function() {
+xdescribe("Jasmine Feature Tests: ", function() {
 
     beforeEach(function() {
         player = new Player("Shiv");
