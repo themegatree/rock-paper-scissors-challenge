@@ -5,8 +5,8 @@ describe("Index Tests: ", function() {
     });
 
     it("PT1: Make sure home page elements are there", function(){
-        cy.get("#index-title").should("contain", "Rock, Paper, Scissors!");
-        cy.get("#instructions").should("contain", "How to play Rock, Paper, Scissors");   
+        cy.get("#index-title").should("contain", "Rock Paper Scissors!");
+        cy.get("#instructions").should("contain", "To use this app input your name");   
     }); 
 
     it("BF8: Input bar",function() {
