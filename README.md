@@ -29,7 +29,7 @@ Then navigate to the address displayed in the command terminal (by default set t
 Tests are broken into two catagories. The logic based tests are covered with Jasmine and can be checked with:
 
 ```bash
-$ npm test
+$ npm jasmine
 ```
 Tests for the server are written with Cypress. To use Cypress first open the application with:
 
@@ -46,7 +46,6 @@ or if you dislike the visual user interface:
 ```
 $ npx cypress start
 ```
-
 ---
 ## Acceptance Criteria
 
@@ -86,15 +85,18 @@ Object | Message | Input | Output | Notes
 ---|---|---|--- | ----
 Player | constructor( ) | name[@string] | --- | ---
 Player | userRPS( ) |  RPS[@integer] | --- | Used to input User RPS choice 
+| | | |
 Game | constructor( ) | player[@Player] | --- | ---
 Game | compRPS( ) | RPS[@integer] | --- | Computer's RPS choice
 Game | compare( ) | --- | result[@string] | Compares results
+| | | | 
 
 ---
 ## Process Model
 Client | | Browser | | Server
 ---| --- |--- |--- | ---
-===> | `node app.js` | ===> | LISTEN request | ===>
+| | | | 
+===> | Run `node app.js` | ===> | LISTEN request | ===>
 <===| Console log port number | <=== | Port number found | <===
 | | | | 
 ===> | Home Page URL | ===> | GET request | ===>
@@ -114,3 +116,6 @@ Client | | Browser | | Server
 | | | | 
 ===> | Input[@Restart] |===> | POST request | ===>
 <=== | Render HTML | <=== | Response HTML `index.ejs` | <===
+| | | | 
+
+---

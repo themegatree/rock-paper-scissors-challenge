@@ -19,6 +19,23 @@ I would like to be able to play rock/paper/scissors
 ## Base Functionality (Component Tests)
 BF1: 
 ```
+As a DFAT member
+I would like to create a player
+I would like to input my name to create a player class
+```
+
+BF2:
+```
+As a DFAT member
+So I can play RPS
+I would like to select an RPS input
+```
+
+BF3:
+```
+As a developer
+So Players can play RPS
+I would like to ensure players are added to the game
 ```
 
 ## Extended Criteria (Feature Tests)
