@@ -96,21 +96,21 @@ Client | | Browser | | Server
 ---| --- |--- |--- | ---
 ===> | `node app.js` | ===> | LISTEN request | ===>
 <===| Console log port number | <=== | Port number found | <===
-|
+| | | | 
 ===> | Home Page URL | ===> | GET request | ===>
 <===| Render HTML | <=== | Response HTML `index.ejs` | <===
-|
+| | | | 
 ===> |Input[@name] | ===> | POST request | ===>
  <=== | Render HTML | <=== | Response HTML `rps.ejs` |<===
-|
+| | | | 
 ===> | Start Game Page URL | ===> | GET request | ===>
 <===| Render HTML | <=== | Response HTML `rps.ejs` | <===
- |
+| | | | 
 ===> | Input[@RPS] |===> | POST request | ===>
 <=== | Render HTML | <=== | Response HTML `result.ejs` | <===
-|
+| | | | 
 ===> | Results Page URL | ===> | GET request | ===>
 <===| Render HTML | <=== | Response HTML `result.ejs` | <===
- |
+| | | | 
 ===> | Input[@Restart] |===> | POST request | ===>
 <=== | Render HTML | <=== | Response HTML `index.ejs` | <===
