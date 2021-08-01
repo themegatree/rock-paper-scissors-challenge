@@ -2,7 +2,8 @@
 
 This is my submission for the Rock Paper Scissors challenge. Full instructions for the challenge can be found [here](./instructions.md).
 
-#### Installation
+---
+## Installation
 This project can be installed through Git:
 
 ```bash
@@ -94,7 +95,7 @@ Game | compare( ) | --- | result[@string] | Compares results
 Client | | Browser | | Server
 ---| --- |--- |--- | ---
 ===> | `node app.js` | ===> | LISTEN request | ===>
-<===| Console log por | <=== |  | <===
+<===| Console log port number | <=== | Port number found | <===
 |
 ===> | Home Page URL | ===> | GET request | ===>
 <===| Render HTML | <=== | Response HTML `index.ejs` | <===
