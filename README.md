@@ -1,26 +1,54 @@
-# RPS Challenge
+# Rock Paper Scissors Challenge
 
-Instructions
--------
+This is my submission for the Rock Paper Scissors challenge. Full instructions for the challenge can be found [here](./instructions.md).
 
-* Feel free to use google, your notes, books, etc. but work on your own
-* If you refer to the solution of another coach or trainee, please put a link to that in your README
-* If you have a partial solution, **still check in a partial solution**
-* You must submit a pull request to this repo with your code by 9:30am Monday morning
+#### Installation
+This project can be installed through Git:
 
-Task
-----
+```bash
+$ git clone https://github.com/themegatree/rock-papers-scissors-challenge
+```
 
-The DFA team ( **DFAT** ) have asked you to provide a game for them. The daily grind is pretty tough and they need time to have a little fun.
+Then to install dependencies:
 
-As usual please start by
+```bash
+$ npm install
+```
 
-* Forking this repo
-* TEST driving development of your app
+To view the application use:
+```bash
+$ node app.js
+```
 
-Your task is to provide a _Rock, Paper, Scissors_ game for them so they can play on the web with the following user stories:
+Then navigate to the address displayed in the command terminal (by default set to `http://localhost:3000`).
 
-### Acceptance Criteria
+---
+## Running the Tests
+
+Tests are broken into two catagories. The logic based tests are covered with Jasmine and can be checked with:
+
+```bash
+$ npm test
+```
+Tests for the server are written with Cypress. To use Cypress first open the application with:
+
+```bash
+$ node app.js
+```
+
+then run the tests with:
+
+```bash
+$ npx cypress open
+```
+or if you dislike the visual user interface:
+```
+$ npx cypress start
+```
+
+---
+## Acceptance Criteria
+
 ```
 As a DFAT member
 So that I can see my name
@@ -30,33 +58,58 @@ As a DFAT member
 So that I can enjoy myself away from the daily grind
 I would like to be able to play rock/paper/scissors
 ```
+---
+## Appoach
 
-Hints on functionality
+I wrote domain and process models for the code (see below). 
 
-- the DFAT member should be able to enter their name before the game
-- the DFAT member will be presented the choices (rock, paper and scissors)
-- the DFAT member can choose one option
-- the game will choose a random option
-- a winner will be declared
+Then I wrote test code with Jasmine and Cypress using mocks to ensure each component is working correctly. I started with feature tests based on the User stories found in the Accepance Critria. I then converted some features I wanted the program to have into user stories (found [here](./user-stories.md)) before converting these stories to component tests.
 
-## Basic Rules
+I then made the logic work. I created two classes for this project:
 
-- Rock beats Scissors
-- Scissors beats Paper
-- Paper beats Rock
+`Player`: This handles the users and thier inputs.
 
-In code review we'll be hoping to see:
+`Game`: This handles game logic.
 
-* All tests passing
-* High test coverage
-* The code is elegant: every class has a clear responsibility, methods are short etc.
+I then wrote the server side logic to handle user inputs. There are three pages in the website: 
 
-### Extended Acceptance Criteria
+`/`: Home page, allowing user to input the name.
 
-#### Multiplayer
+`/rps`: Allows user to input the RPS choice.
 
-Change the game so that two DFAT members can play against each other ( _yes there are two of them_ ).
+`/result`: Displays the result of the game.
 
-#### Rock, Paper, Scissors, Spock, Lizard
+---
+## Domain Model:
+Object | Message | Input | Output | Notes
+---|---|---|--- | ----
+Player | constructor( ) | name[@string] | --- | ---
+Player | userRPS( ) |  RPS[@integer] | --- | Used to input User RPS choice 
+Game | constructor( ) | player[@Player] | --- | ---
+Game | compRPS( ) | RPS[@integer] | --- | Computer's RPS choice
+Game | compare( ) | --- | result[@string] | Compares results
 
-Use the _special_ rules ( _you can find them here http://en.wikipedia.org/wiki/Rock-paper-scissors-lizard-Spock_ )
+---
+## Process Model
+Client | | Browser | | Server
+---| --- |--- |--- | ---
+===> | `node app.js` | ===> | LISTEN request | ===>
+<===| Console log por | <=== |  | <===
+|
+===> | Home Page URL | ===> | GET request | ===>
+<===| Render HTML | <=== | Response HTML `index.ejs` | <===
+|
+===> |Input[@name] | ===> | POST request | ===>
+ <=== | Render HTML | <=== | Response HTML `rps.ejs` |<===
+|
+===> | Start Game Page URL | ===> | GET request | ===>
+<===| Render HTML | <=== | Response HTML `rps.ejs` | <===
+ |
+===> | Input[@RPS] |===> | POST request | ===>
+<=== | Render HTML | <=== | Response HTML `result.ejs` | <===
+|
+===> | Results Page URL | ===> | GET request | ===>
+<===| Render HTML | <=== | Response HTML `result.ejs` | <===
+ |
+===> | Input[@Restart] |===> | POST request | ===>
+<=== | Render HTML | <=== | Response HTML `index.ejs` | <===
