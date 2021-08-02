@@ -16,7 +16,7 @@ class Game {
         if (res === 0) {return "It's a draw!"}
         else if (res === 1 || res === 3) {return "Player wins!"}
         else if (res === 2 || res === 4) {return "Player loses!"};
-    }
+    };
 };
 
 module.exports = Game;

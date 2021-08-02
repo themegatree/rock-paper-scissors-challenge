@@ -16,4 +16,10 @@ describe("Feature Tests: ", function() {
         cy.get("#result");
     })
 
+    it("EX1 (feature)", function() {
+        cy.get("#startRPSLS").click();
+        cy.get("#paper").click();
+        cy.get("#result");
+    })
+
 });
