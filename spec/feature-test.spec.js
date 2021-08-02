@@ -26,4 +26,17 @@ describe("Jasmine Feature Tests: ", function() {
         game.compRPS();
         expect(game.compare()).toEqual("Player loses!");
     });
+
+    it("EC1a: Can I win RPSLS",function() {
+        spyOn(game,"compRPS").and.callFake(() => {game.compChoice = 3});
+        game.compRPS();
+        expect(game.compare()).toEqual("Player wins!");
+    });
+
+    it("EC1b: Can I lose RPSLS",function() {
+        spyOn(game,"compRPS").and.callFake(() => {game.compChoice = 4});
+        game.compRPS();
+        expect(game.compare()).toEqual("Player loses!");
+    });
+
 });

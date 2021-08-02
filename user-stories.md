@@ -89,10 +89,13 @@ I want a result message to show
 
 
 
-<!-- ## Extended Criteria (Feature Tests)
+## Extended Criteria (Feature Tests)
 EC1: 
 ```
-``` -->
+As a user who wants to play a game with more choices
+So I can exercise my mind
+I would like the option to play RPSLS
+```
 
 ## My Tests for the functionality not listed in the instructions
 PT1:
