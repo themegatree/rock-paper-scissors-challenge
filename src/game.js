@@ -20,10 +20,3 @@ class Game {
 };
 
 module.exports = Game;
-
-// let player = new Player("Shiv")
-// player.userRPS(2);
-// let game = new Game(player)
-// game.compRPS()
-// console.log(game.compChoice)
-// console.log(game.compare())

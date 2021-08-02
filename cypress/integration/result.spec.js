@@ -3,7 +3,7 @@ describe("Results Tests: ", function() {
     beforeEach(function() {
         cy.visit("/");
         cy.get("#p1-input").type("Shiv");
-        cy.get("#enterRPS").click();
+        cy.get("#startRPS").click();
         cy.get("#paper").click();
         });
 
