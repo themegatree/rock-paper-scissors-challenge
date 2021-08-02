@@ -58,7 +58,7 @@ So that I can enjoy myself away from the daily grind
 I would like to be able to play rock/paper/scissors
 ```
 
-Through cypress running `feature-test.spec.js` will confirm this these user stories are 
+Through cypress running `feature-test.spec.js` will confirm this these user stories work as expected.
 
 ---
 ## Appoach
