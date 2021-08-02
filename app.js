@@ -25,7 +25,7 @@ app.use('/rps', rpsRouter);
 app.use('/rpsls', rpslsRouter);
 app.use('/rock', rockRouter);
 app.use('/paper', paperRouter);
-app.use('/scissors', scissorsRPSLSRouter);
+app.use('/scissors', scissorsRouter);
 app.use('/rockRPSLS', rockRPSLSRouter);
 app.use('/paperRPSLS', paperRPSLSRouter);
 app.use('/scissorsRPSLS', scissorsRPSLSRouter);
