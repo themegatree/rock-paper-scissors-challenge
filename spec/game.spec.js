@@ -41,14 +41,14 @@ describe("Game Class Component Tests: ", function() {
     });
 
     it("EX1c: Can CPU pick Spock",function() {
-        spyOn(game,"compRPS").and.callFake(() => {game.compChoice = 3})
-        game.compRPS()
+        spyOn(game,"compRPSLS").and.callFake(() => {game.compChoice = 3})
+        game.compRPSLS()
         expect(game.compChoice).toEqual(3);
     });
 
     it("EX1d: Can CPU pick Lizard",function() {
-        spyOn(game,"compRPS").and.callFake(() => {game.compChoice = 4})
-        game.compRPS()
+        spyOn(game,"compRPSLS").and.callFake(() => {game.compChoice = 4})
+        game.compRPSLS()
         expect(game.compChoice).toEqual(4);
     });
 
@@ -71,14 +71,14 @@ describe("Game Class Component Tests: ", function() {
     });
 
     it("EX1e: Can the player win RPSLS",function() {
-        spyOn(game,"compRPS").and.callFake(() => {game.compChoice = 3})
-        game.compRPS()
+        spyOn(game,"compRPSLS").and.callFake(() => {game.compChoice = 3})
+        game.compRPSLS()
         expect(game.compare()).toEqual("Player wins!");
     });
 
     it("EX1f: Can the player lose RPSLS",function() {
-        spyOn(game,"compRPS").and.callFake(() => {game.compChoice = 4})
-        game.compRPS()
+        spyOn(game,"compRPSLS").and.callFake(() => {game.compChoice = 4})
+        game.compRPSLS()
         expect(game.compare()).toEqual("Player loses!");
     });
 });
