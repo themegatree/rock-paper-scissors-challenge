@@ -1,6 +1,6 @@
 const Player = require("../src/player.js");
 
-xdescribe("Player Class Component Tests: ", function() {
+describe("Player Class Component Tests: ", function() {
 
     beforeEach(function() {
         player = new Player("Shiv");
