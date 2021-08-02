@@ -10,6 +10,7 @@ router.post('/', (req, res) => {
     p1.userRPS(4);
     game = new Game(p1)
     game.compRPSLS();
+    
     let result = game.compare();
     res.render('result.ejs', {
     result: result,
