@@ -2,7 +2,7 @@ describe("RPSLS Tests: ", function() {
 
     beforeEach(function() {
         cy.visit("/");
-        cy.get("#p1-input").type("Shiv");
+        cy.get("#p1-input-rpsls").type("Shiv");
         cy.get("#startRPSLS").click();
     });
 

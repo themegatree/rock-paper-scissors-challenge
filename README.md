@@ -61,6 +61,12 @@ I would like to be able to play rock/paper/scissors
 Through cypress running `feature-test.spec.js` will confirm this these user stories work as expected.
 
 ---
+
+## Extended Criteria
+
+I have turned the Rock-Paper-Scissors-Lizard-Spock extended criteria into a user story. I then implemented this this game into the application. 
+
+---
 ## Appoach
 
 I wrote domain and process models for the code (see below). 
@@ -90,6 +96,7 @@ Player | userRPS( ) |  RPS[@integer] | --- | Used to input User RPS choice
 | | | |
 Game | constructor( ) | player[@Player] | --- | ---
 Game | compRPS( ) | RPS[@integer] | --- | Computer's RPS choice
+Game | compRPS( ) | RPSPL[@integer] | --- | Computer's RPSLS choice
 Game | compare( ) | --- | result[@string] | Compares results
 | | | | 
 
