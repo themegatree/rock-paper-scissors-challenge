@@ -25,7 +25,6 @@ describe("Game Class Component Tests: ", function() {
     it("BF5a: Can CPU pick Rock", function() {
         spyOn(game,"compRPS").and.callFake(() => {game.compChoice = 0})
         game.compRPS()
-        console.log(game.compChoice)
         expect(game.compChoice).toEqual(0);
     });
 

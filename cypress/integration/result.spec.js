@@ -7,7 +7,12 @@ describe("Results Tests: ", function() {
         cy.get("#paper").click();
         });
 
-    it("BF9: Make sure buttons are there", function(){
+    it("BF10: Make sure result is visable", function(){
         cy.get("#result");
     }); 
+
+    it("PT2: Reset Button", function() {
+        cy.get("#reset").should("contain", "Reset");
+    });
+    
 });

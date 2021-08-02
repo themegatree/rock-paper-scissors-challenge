@@ -89,10 +89,10 @@ I want a result message to show
 
 
 
-## Extended Criteria (Feature Tests)
+<!-- ## Extended Criteria (Feature Tests)
 EC1: 
 ```
-```
+``` -->
 
 ## My Tests for the functionality not listed in the instructions
 PT1:

@@ -7,6 +7,7 @@ describe("RPS Tests: ", function() {
     });
 
     it("BF9: Make sure buttons are there", function(){
+        cy.get("#rps-intro").should("contain", "Hello Shiv!")
         cy.get("#rock").should("contain", "Rock");
         cy.get("#paper").should("contain", "Paper");
         cy.get("#scissors").should("contain", "Scissors");
